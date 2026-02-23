@@ -1,0 +1,20 @@
+* {
+    margin:0;
+    padding:0;
+    font-family:'Inter',sans-serif;
+}
+.nav {
+    display:flex;
+    height:50px;
+    width:100%;
+    justify-content:space-between;
+    align-items:center;
+}
+:root {
+  --bg: #0F172A;
+  --card: #1E293B;
+  --primary: #3B82F6;
+  --primary-hover: #60A5FA;
+  --text-main: #F8FAFC;
+  --text-secondary: #94A3B8;
+}
