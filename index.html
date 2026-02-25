@@ -5,27 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdeul Malik-Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="nav">
-            <div class="logo-text"></div>
-            <div class="nav-options">
-                <a href="#">Home</a>
-                <a href="#">skill</a>
-                <a href="#">About Me</a>
-                <a href="#">Contact Me</a>    
-            </div>
+       <nav class="nav">
+        <div class="logo-text">
+            <div class="logo"></div>
+            <div class="text"><span>Abdul Malik</span></div>
         </div>
-        <div class="hero">
-            <div class="img"></div>
-            <div class="info">
-                <div class="hello">Hello.</div>
-                <div class="name">I am Abudl Malik</div>
-                <div class="rol">Frontend Developer</div>
+        <ul class="nav-options">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Contact Me</a></li>
+        </ul>
+       </nav>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="name-role">
+                    <p class="hello">Hello 👋</p>
+                    <h1 class="name">I am <span>Abdul Malik</span></h1>
+                    <h2 class="role">Frontend Developer</h2>
+                </div>
+                <div class="cta-btns">
+                    <button class="cta-btn"><a href="#projects" >View My Work</a>
+                    </button>
+                    <button class="cta-btn"><a href="#">Contact Me</a></button>
+                </div>
             </div>
-            <div class="cta"></div>
-        </div>
+
+            <div class="hero-image">
+                <div class="inner-circle"></div>
+            </div>
+        </section>
     </header>
 </body>
 </html>
