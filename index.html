@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-       <nav class="nav">
+    <nav class="nav">
         <div class="logo-text">
             <div class="logo"></div>
             <div class="text"><span>Abdul Malik</span></div>
@@ -23,6 +23,7 @@
             <li><a href="#">Contact Me</a></li>
         </ul>
        </nav>
+    <header>
         <section class="hero">
             <div class="hero-content">
                     <p class="hello">Hello 👋</p>
@@ -38,29 +39,62 @@
         </section>
     </header>
     <main>
-        <section>
+        <section class="about-me-section">
             <h1 class="section-title"><span>About Me</span></h1>
-            <br><br><br>
             <div class="about-me">
                 <div class="personal-img"></div>
                 <div class="personal-info">
+                    <br><br>
+                    <h1>Abdul Malik</h1>
+                    <h3>Frontend Developer</h3>
                     <p>I’m Abdul Malik, a Frontend Developer who loves creating smooth and interactive web experiences. I focus on clean UI, responsive layouts, and performance. My goal is to build websites that not only look good but also feel great to use.</p>
                     <p>I am currently studying Computer Science at 
                     <strong>University of Sindh (Laar Campus)</strong> and based in Badin Pakistan,where I continue to improve my technical and problem-solving skills.</p>
                 </div>
             </div>
-            
         </section>
-        <section>
+        <section class="skills">
             <h1 class="section-title"><span>Skills</span></h1>
             <div class="skill-container">
-                <div class="skill"><img src="/assetts/images/html.png" alt="html"><span>HTML</span></div>
-                <div class="skill"><img src="/assetts/images/css.png" alt="css"><span>CSS</span></div>
-                <div class="skill"><img src="/assetts/images/javascript.png" alt="javascript"><span>JAVA SCRIPT</span></div>
+                <div class="skill-card"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
+                <div class="skill-card"><i class="fa-brands fa-css"></i><p>CSS</p></div>
+                <div class="skill-card"><i class="fa-brands fa-js"></i><P>JavaScript</P></div>
+                <div class="skill-card"><i class="fa-brands fa-git"></i><P>Git</P></div>
+                <div class="skill-card"><i class="fa-brands fa-github"></i><P>GitHub</P></div>
+                <div class="skill-card"><i class="fa-brands fa-google"></i><P>Googling</P></div>
             </div>
         </section>
-        <section>
-            <h1 class="section-title">Projects</h1>
+        <section class="projects-section">
+            <h1 class="section-title"><span>Projects</span></h1>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="/assetts/images/simon-says.jpg" alt="Simon-game">
+                    <h3>Simon Says Game</h3>
+                    <p>Simply made this game by applying javascript logic...</p>
+                    <div class="project-links">
+                        <a href="#">Live Demo</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/assetts/images/color-generator.jpg" alt="">
+                    <h3>Random Color Generator</h3>
+                    <p>This app will generate a random color at each interval</p>
+                    <div class="project-links">
+                        <a href="#">Live Demo</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="" alt="">
+                    <h3></h3>
+                    <p></p>
+                    <div class="project-links">
+                        <a href="#">Live Demo</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
