@@ -13,8 +13,11 @@
 
 }
 h1,h2 {
-    font-size:50px;
+    font-size:30px;
     color:var(--text-main);
+}
+p {
+    color:var(--text-secondary);
 }
 
 body {
@@ -32,6 +35,14 @@ body {
 .nav .logo-text {
     display:flex;
     gap:10px;
+    align-items:center;
+}
+.logo-text .logo {
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    background-image:url(/assetts/images/logo.png);
+    background-size:cover;
 }
 .logo-text .text {
     color:var(--text-main);
@@ -59,7 +70,7 @@ body {
 .hero {
     display:flex;
     width:100%;
-    height:500px;
+    height:600px;
     gap:400px;
     align-items:center;
 }
@@ -67,36 +78,33 @@ body {
     display:flex;
     flex-direction:column;
     padding:50px;
-    gap:30px;
-    align-items:center;
+    gap:20px;
+    align-items:flex-start;
 }
-.hero-content .name-role {
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-   
+.hero-content .name {
+    font-size:50px;
 }
-.name-role .hello {
+.hero-content .role {
+    font-size:40px;
+    font-weight:500;
+}
+.hero-content .hello {
     font-size:30px;
-    color:var(--text-secondary);
-    font-weight:700;
+    color:var(--text-main);
+    font-weight:300;
 }
-.name-role .name {
-    font-weight:400;
-}
-.hero-content .cta-btns {
-    display:flex;
-    justify-content:flex-start;
-    gap:15px;
-}
+
+
+
 .hero-content a {
     text-decoration:none;
-    font-size:20px;
+    font-size:25px;
     color:var(--text-main);
+    font-weight:500;
 }
 .cta-btn {
     padding:10px;
-    border-radius:15px;
+    border-radius:10px;
     background-color: var(--primary);
 }
 .cta-btn:hover {
@@ -116,4 +124,38 @@ body {
     background-image:url(/assetts/images/logo.png);
     background-size:cover;
     margin:25px;
+}
+#name {
+    color:var(--primary);
+}
+.section-title {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+.section-title span {
+    font-weight:400;
+    font-size:40px;
+}
+.about-me {
+    display:flex;
+}
+.skill-container {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.skill-container img {
+    height:100px;
+
+}
+.skill-container .skill {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.skill span {
+    color:var(--text-main);
+    font-size:30px;
 }
