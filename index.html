@@ -28,7 +28,7 @@
             <div class="hero-content">
                     <p class="hello">Hello 👋</p>
                     <h1 class="name">I am <span id="name">Abdul Malik</span></h1>
-                    <h2 class="role">Frontend Developer</h2>
+                    <h2 class="role">I am into <span class="typing"></span></h2>
                     <button class="cta-btn"><a href="#projects" >View My Work ></a>
                     </button>
                 </div>
@@ -40,7 +40,7 @@
     </header>
     <main>
         <section class="about-me-section">
-            <h1 class="section-title"><span>About Me</span></h1>
+            <h1 class="section-title"><i class="fa-solid fa-user"></i><span>About Me</span></h1>
             <div class="about-me">
                 <div class="personal-img"></div>
                 <div class="personal-info">
@@ -54,7 +54,7 @@
             </div>
         </section>
         <section class="skills">
-            <h1 class="section-title"><span>Skills</span></h1>
+            <h1 class="section-title"><i class="fa-solid fa-code"></i><span>Skills</span></h1>
             <div class="skill-container">
                 <div class="skill-card"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
                 <div class="skill-card"><i class="fa-brands fa-css"></i><p>CSS</p></div>
@@ -65,7 +65,7 @@
             </div>
         </section>
         <section class="projects-section">
-            <h1 class="section-title"><span>Projects</span></h1>
+            <h1 class="section-title"><i class="fa-solid fa-folder-open"></i><span>Projects</span></h1>
             <div class="project-grid">
                 <div class="project-card">
                     <img src="/assetts/images/simon-says.jpg" alt="Simon-game">
@@ -96,6 +96,79 @@
                 </div>
             </div>
         </section>
+        <section class="contact-section">
+            <h1 class="section-title"><i class="fa-solid fa-envelope"></i><span>Contact Me</span></h1>
+            <div class="contact-div">
+                <div class="left-div">
+                    <img src="/assetts/images/coder.png" alt="coder-img">
+                </div>
+                <div class="right-div">
+                    <div class="one-line-input">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="Name" placeholder="Name">
+                    </div>
+                    <div class="one-line-input">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="one-line-input">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="number" id="phone" placeholder="Phone">
+                    </div>
+                    <div class="message one-line-input">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <textarea name="message" id="message" rows="6" cols="50" placeholder="Message"></textarea>
+                    </div>
+                    <div class="submit"><button>Submit <i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Abdul Malik. All rights reserved.</p>
+    
+    <div class="footer-links">
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+<script id="hv9q2p">
+const roles = ["Frontend Developer", "UI Designer", "React Enthusiast"];
+const typingEl = document.querySelector(".typing");
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+  const currentRole = roles[roleIndex];
+
+  if(isDeleting) {
+    typingEl.textContent = currentRole.substring(0, charIndex--);
+  } else {
+    typingEl.textContent = currentRole.substring(0, charIndex++);
+  }
+
+  let delay = isDeleting ? 50 : 150; // delete faster, type slower
+
+  // Pause at full word
+  if(!isDeleting && charIndex === currentRole.length) {
+    delay = 1000;
+    isDeleting = true;
+  } else if(isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+    delay = 500; // small pause before typing next word
+  }
+
+  setTimeout(type, delay);
+}
+
+type();
+</script>
 </body>
 </html>
