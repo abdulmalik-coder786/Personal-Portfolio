@@ -27,7 +27,7 @@ body {
     display:flex;
     height:50px;
     width:100%;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:center;
     position:sticky;
     z-index:50;
@@ -100,8 +100,6 @@ body {
     font-weight:300;
 }
 
-
-
 .hero-content a {
     text-decoration:none;
     font-size:25px;
@@ -168,14 +166,15 @@ body {
     border-radius:16px;
 }
 .about-me .personal-info {
-    width:800px;
     display:flex;
+    width:60%;
     flex-direction:column;
     gap:15px;
 }
 .personal-info h3 {
     color:var(--primary);
     font-weight:400;
+    
 }
 .personal-info p {
     color:var(--text-secondary);
@@ -374,24 +373,50 @@ body {
 }
 .footer {
   border-top: 1px solid rgba(255,255,255,0.1);
-}/* Hero Role Styling */
-.role {
-  font-size: 28px;
-  color: var(--text-main);
-  font-weight: 500;
-  margin-top: 10px;
 }
-
 .typing {
-  border-right: 2px solid var(--primary); /* blinking cursor */
-  padding-right: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blink 0.7s infinite;
+    border-right:2px solid var(--text-main);
+    white-space:nowrap;
+    overflow:hidden;
 }
 
-/* Cursor blink animation */
-@keyframes blink {
-  0%, 50%, 100% { border-color: var(--primary); }
-  25%, 75% { border-color: transparent; }
+/*======Tablet======*/
+
+@media screen and (max-width:1024px) {
+    h1,h2 {
+        font-size:20px;
+    }
+    #name, .typing {
+        font-size:30px;
+    }
+    .nav-options li a {
+        font-size:15px;
+    }
+    .hero {
+        gap:40px;
+    }
+    .right-div {
+        height:100%;
+    }
+    .contact-div .right-div .one-line-input{
+        height:20px;
+    }
+    .contact-div .right-div .message {
+        height:30%;
+    }
+    .left-div {
+        width:50%;
+    }
+    .left-div img {
+        width:100%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .hero {
+        flex-direction:column;
+    }
+    .hero-image {
+        order: -1;
+    }
 }

@@ -13,7 +13,6 @@
 <body>
     <nav class="nav">
         <div class="logo-text">
-            <div class="logo"></div>
             <div class="text"><span>Abdul Malik</span></div>
         </div>
         <ul class="nav-options">
@@ -61,7 +60,7 @@
                 <div class="skill-card"><i class="fa-brands fa-js"></i><P>JavaScript</P></div>
                 <div class="skill-card"><i class="fa-brands fa-git"></i><P>Git</P></div>
                 <div class="skill-card"><i class="fa-brands fa-github"></i><P>GitHub</P></div>
-                <div class="skill-card"><i class="fa-brands fa-google"></i><P>Googling</P></div>
+                <div class="skill-card"><i class="fa-brands fa-goo  gle"></i><P>Googling</P></div>
             </div>
         </section>
         <section class="projects-section">
@@ -135,40 +134,7 @@
       <a href="#"><i class="fa-brands fa-twitter"></i></a>
     </div>
   </div>
-</footer>
-<script id="hv9q2p">
-const roles = ["Frontend Developer", "UI Designer", "React Enthusiast"];
-const typingEl = document.querySelector(".typing");
-
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function type() {
-  const currentRole = roles[roleIndex];
-
-  if(isDeleting) {
-    typingEl.textContent = currentRole.substring(0, charIndex--);
-  } else {
-    typingEl.textContent = currentRole.substring(0, charIndex++);
-  }
-
-  let delay = isDeleting ? 50 : 150; // delete faster, type slower
-
-  // Pause at full word
-  if(!isDeleting && charIndex === currentRole.length) {
-    delay = 1000;
-    isDeleting = true;
-  } else if(isDeleting && charIndex === 0) {
-    isDeleting = false;
-    roleIndex = (roleIndex + 1) % roles.length;
-    delay = 500; // small pause before typing next word
-  }
-
-  setTimeout(type, delay);
-}
-
-type();
-</script>
+</footer>  
+<script src="script.js"></script>
 </body>
 </html>
